@@ -104,6 +104,7 @@
                         <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>
+                            <!--只执行一次-->
                             <goal>single</goal>
                         </goals>
                         <configuration>
