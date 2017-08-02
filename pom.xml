@@ -69,6 +69,7 @@
                             <addClasspath>true</addClasspath>
                             <!-- 指定依赖的时候声明前缀 -->
                             <classpathPrefix>./</classpathPrefix>
+                            <useUniqueVersions>false</useUniqueVersions>
                         </manifest>
                     </archive>
                 </configuration>
