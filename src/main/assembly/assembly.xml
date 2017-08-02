@@ -1,0 +1,26 @@
+<assembly>
+    <id></id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <!--tar.gz压缩包下是否生成和项目名相同的根目录-->
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <!--是否把本项目添加到依赖文件夹下-->
+            <useProjectArtifact>true</useProjectArtifact>
+            <outputDirectory>lib</outputDirectory>
+            <!--将scope为runtime的依赖包打包-->
+            <scope>runtime</scope>
+            <!--指定最后生成依赖的名称格式，解决snapshot版本依赖引用不到的问题-->
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/bin</directory>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>
+
